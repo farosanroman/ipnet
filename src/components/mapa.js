@@ -19,10 +19,19 @@ const linePaint = {
   'line-width': 2
 };
 const puntos=rutas.points;
-const mappedRoute = rutas.points.map(
+const mappedRoute0 = rutas[0].points.map(
   point => [point.lat, point.lng] 
 );
-console.log(mappedRoute)
+const mappedRoute1 = rutas[1].points.map(
+  point => [point.lat, point.lng] 
+);
+const mappedRoute2 = rutas[2].points.map(
+  point => [point.lat, point.lng] 
+);
+const mappedRoute3 = rutas[3].points.map(
+  point => [point.lat, point.lng] 
+);
+//console.log(mappedRoute)
 const circlePaint= MapGL.CirclePaint = {
   'circle-color': 'dodgerblue'
 };
@@ -108,7 +117,16 @@ getCirclePaint = (color) => ({
             />
         </Layer>
       <Layer type="line" layout={lineLayout} paint={linePaint}>
-          <Feature coordinates={mappedRoute} />
+          <Feature coordinates={mappedRoute0} />
+        </Layer>
+        <Layer type="line" layout={lineLayout} paint={linePaint}>
+          <Feature coordinates={mappedRoute1} />
+        </Layer>
+        <Layer type="line" layout={lineLayout} paint={linePaint}>
+          <Feature coordinates={mappedRoute2} />
+        </Layer>
+        <Layer type="line" layout={lineLayout} paint={linePaint}>
+          <Feature coordinates={mappedRoute3} />
         </Layer>
 
         <GeoJSONLayer
