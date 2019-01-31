@@ -61,7 +61,7 @@ class Mapa extends Component {
     this.state={
       nodos:nodos,
       center:centro,
-      zoom:[14],
+      zoom:[13],
       flagPopup:false ,
       properties:null,
       coordinates:[],
