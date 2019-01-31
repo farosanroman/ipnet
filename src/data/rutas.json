@@ -2,11 +2,11 @@
 {"rutas":
 [
     {    
-        "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-       "name": "Test route",
-        "distance": 10110.085,
-        "duration": 1307423,
-        "transport": "car",
+      "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
+       "name": "Sub Nodos",
+       "tipo":"NodoPrincipal",  
+       "lugar":"Las Mercedes",
+       "capacidad":{"ancho":"50","unidad":"MH"    },
         "points": [
           {
             "lat": -66.8722,
@@ -16,21 +16,18 @@
             "lat":  -66.8583,
             "lng": 10.4824
           }
-        ],
-    
-        "departureId": "95ed8890-063e-11e6-8042-ab12df6ec57b",    
-        "arrivalId": "95ee9a00-063e-11e6-8042-ab12df6ec57b"
-    
+        ]
+
       }
     
     ,
     {    
       "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-     "name": "Test route",
-      "distance": 10110.085,
-      "duration": 1307423,
-      "transport": "car",
-      "points": [
+     "name": "Sub Nodos",
+     "tipo":"NodoPrincipal",  
+     "lugar":"Las Mercedes",
+     "capacidad":{"ancho":"50","unidad":"MH"    },
+     "points": [
         {   
           
           "lat": -66.847684,
@@ -40,20 +37,16 @@
           "lat":  -66.8583,
           "lng": 10.4824
         }
-      ],
-  
-      "departureId": "95ed8890-063e-11e6-8042-ab12df6ec57b",    
-      "arrivalId": "95ee9a00-063e-11e6-8042-ab12df6ec57b"
+      ]
   
     }
     ,
     {    
       "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-     "name": "Test route",
-      "distance": 10110.085,
-      "duration": 1307423,
-      "transport": "car",
-      "points": [
+      "tipo":"NodoPrincipal",  
+      "lugar":"Las Mercedes",
+      "capacidad":{"ancho":"50","unidad":"MH"    },
+       "points": [
         {   
           
           "lat": -66.8827,
@@ -63,11 +56,9 @@
           "lat":  -66.8583,
           "lng": 10.4824
         }
-      ],
+      ]
   
-      "departureId": "95ed8890-063e-11e6-8042-ab12df6ec57b",    
-      "arrivalId": "95ee9a00-063e-11e6-8042-ab12df6ec57b"
-  
+      
     },
     
     {    
@@ -81,6 +72,17 @@
           
           "lat": -66.8583,
           "lng": 10.4824
+        },
+       
+        {   
+          
+          "lat": -66.846331,
+          "lng": 10.482619
+        },
+        {   
+          
+          "lat": -66.833026,
+          "lng": 10.479579
         },
         {
           "lat":  -66.8073,

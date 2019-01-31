@@ -1,144 +1,63 @@
 {"nodos":
     {
-        "type":"FeatureCollection",
+        "type":"Feature",
         "features":[
           {
-            "type":"Feature",
+            "type":"Feature",            
             "properties":{
-              "place":"Azpurua",
-              "lugar":"Colinas de Valle Arriba"          
-               }, 
-                    
+              "tipo":"nodo",
+              "image":"nodo",
+              "lugar":"Edif Torreon",
+              "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+               },                     
             "geometry":{
               "type":"Point",
-              "coordinates":[
-                -66.8722,
-                10.4713
-              ]
-            }
-          },
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"Bello"             
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.872633,
-                10.473263
-              ]
-            } 
-          },
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"Capriles"
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.872992,
-                10.476602
-              ]  
-            }
-          },
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"Ramirez"
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.872042,
-                10.476175
-              ]
-            }
-          },
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"Colegio Jefferson"
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.8740292,
-                10.470203
-              ]
+              "coordinates":[-66.8569755,10.4791625]
             }
           }
           ,
           {
-            "type":"Feature",
+            "type":"Feature",            
             "properties":{
-              "place":"Tobias"
-            },
+              "tipo":"nodo",
+              "image":"nodo",
+              "lugar":"Edif DAYCO",
+              "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+               },                     
             "geometry":{
               "type":"Point",
-              "coordinates":[
-                -66.871068,
-                10.470204
-              ]
+              "coordinates":[-66.8669755,10.4891625]
             }
           }
           ,
           {
-            "type":"Feature",
+            "type":"Feature",            
             "properties":{
-              "place":"AFK"
-            },
+              "tipo":"nodo",
+              "image":"nodo",
+              "lugar":"Edif Carmelits",
+              "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+               },                     
             "geometry":{
               "type":"Point",
-              "coordinates":[
-                -66.846235,
-                10.496639
-              ]
+              "coordinates":[-66.8769755,10.4991625]
             }
           }
           ,
           {
-            "type":"Feature",
+            "type":"Feature",            
             "properties":{
-              "place":"Shell"
-            },
+              "tipo":"nodo",
+              "image":"nodo",
+              "lugar":"Edif PanNam",
+              "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+               },                     
             "geometry":{
               "type":"Point",
-              "coordinates":[
-                -66.845967,
-                10.498612
-              ]
+              "coordinates":[-66.8599755,10.4791625]
             }
           }
-          ,
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"Mercado Libre"
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.847684,
-                10.499667
-              ] 
-            }
-          }
-          ,
-          {
-            "type":"Feature",
-            "properties":{
-              "place":"FarmMarket"
-            },
-            "geometry":{
-              "type":"Point",
-              "coordinates":[
-                -66.844347,
-                10.497631
-              ] 
-            }
-          }
+          
         ]
       }
 }

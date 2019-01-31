@@ -3,7 +3,7 @@ import Mapa from '../components/mapa'
 import { Card,Row,Col,CardBlock,CardHeader,CardFooter, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import Cliente from '../components/cliente'
-import {nodos} from '../data/nodos.json';
+import {clientes} from '../data/clientes.json';
 
 //https://www.youtube.com/watch?v=qFb1FWcdFq8&list=UUAx4nmhI7S1RcPiaG-Uw0tg&index=6
 //https://www.youtube.com/watch?v=qFb1FWcdFq8&index=6&list=UUAx4nmhI7S1RcPiaG-Uw0tg
@@ -29,7 +29,7 @@ class Nodos extends Component {
   render() { 
       //const clientes=[1,2,3]
       //alert(JSON.stringify(this.state.xu))
-      const clientes=nodos.features
+      const clientes2=clientes.features
       //console.log(clientes)
       const {xu} =this.state
       //console.log(this.state.xu)
@@ -42,7 +42,7 @@ class Nodos extends Component {
         <div className="d-flex flex-row">                    
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div className="card-deck">
-            {clientes.map(function(item,index){
+            {clientes2.map(function(item,index){
               i+=1;
               //console.log("xuuuu")
               //console.log(xu._ne.lat+" "+xu._sw.lat)

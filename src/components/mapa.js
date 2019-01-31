@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import  MapGL,{Layer,Feature,ZoomControl,GeoJSONLayer} from 'react-mapbox-gl';
-import {nodos} from '../data/nodos.json';
+import  MapGL,{Layer,Feature,ZoomControl,GeoJSONLayer,Popup} from 'react-mapbox-gl';
+import {clientes} from '../data/clientes.json';
 import {rutas} from '../data/rutas.json';
+import {nodos} from '../data/nodos.json';
 //console.log(rutas)
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
 const Map = MapGL({
   accessToken: TOKEN
 });
 let centro=[-66.8566,10.4841]
-let zoom=[12]
+//let zoom=[12]
  const circleLayout= MapGL.CircleLayout = { visibility: 'visible' };
  const lineLayout = {
   'line-cap': 'round' ,
@@ -56,13 +57,15 @@ class Mapa extends Component {
   constructor(props){
     super(props);    
     this.state={
-      nodos:[],
-      comentario:"comentario",      
+      nodos:nodos,
       center:centro,
-      zoom:zoom    
-      
+      zoom:[14],
+      flagPopup:false ,
+      properties:null,
+      coordinates:[],
+      comentario:"comentario"
     }
-    //this.onMapClick = this.onMapClick.bind(this)
+   //this.markerClick = this.markerClick.bind(this)
     //this.onChangeEstrato=this.onChangeEstrato.bind(this)  
   }
   
@@ -71,15 +74,52 @@ getCirclePaint = (color) => ({
     'circle-color': color,
     'circle-opacity': 1.0
   });
+    markerClickBorrar = (evt) => {
+      //alert(JSON.stringify(evt))
+      console.log(evt)
+    this.setState({
+      center: [-66.8566,10.4841],
+      zoom: [14],
+      nodoclick:{"nodo":"nombre del nodo","coordenadas":[-66.86286,10]},
+      flagPopup:true
+
+    });
+  };
+  markerClick = (evt,e) => {
+    //alert(JSON.stringify(evt))
+    //alert(JSON.stringify(a))
+    //console.log(evt)
+  this.setState({
+    center: evt.coordinates,
+    zoom: [14],
+    properties:evt.properties,
+    flagPopup:true
+
+  });
+};
     render() {
 
       //const { styleKey } = this.state;
-    let {zoom,center,comentario } = this.state;
+    let {zoom,center,properties,flagPopup,nodos,comentario } = this.state;
+    const N=nodos.features;
+    let i =0;
+    //alert(JSON.stringify(N))
     comentario=this.props.comentario
     //console.log({flagPopupTestigo})
          let sanroman=[{id:1,nombre:"San Roman"}]
          //var roman={id:1,nombre:"San Roman"}
-        return(
+         var ii=0;
+         const NODOS=N.map(nodo=>{     
+           ii+=1;
+            return(
+              <Feature              
+                   key={ii} 
+                   coordinates={nodo.geometry.coordinates}             
+                   onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
+           />    
+                )     
+          }) 
+         return(
         <div>
         <Map           
           style="mapbox://styles/mapbox/light-v9"
@@ -98,13 +138,25 @@ getCirclePaint = (color) => ({
         type="symbol"
         id="marker2"
         layout={{ "icon-image": "marker-15" }}>
-        <Feature coordinates={[-66.95286,10]}/>
-        
-        
+        <Feature coordinates={[-66.95286,10]}/>       
       </Layer>
+     
+      <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+      
+      {NODOS}
+            </Layer>
+        {flagPopup && (
+        <Popup key={'88'} coordinates={center}>            
+              <div>{properties.lugar}</div>
+              <div>
+                Nodo Principal<br/>
+                {properties.direccion}
+              </div>            
+          </Popup>
+        )}
       <Layer type="symbol" id="marker3" layout={{ 'icon-image': 'londonCycle' }} images={images}>
           <Feature              
-              key={'111'} 
+              key={'1112'} 
               coordinates={[-66.8583,10.4824]}
             />
             <Feature              
@@ -130,7 +182,7 @@ getCirclePaint = (color) => ({
         </Layer>
 
         <GeoJSONLayer
-          data={nodos}
+          data={clientes}
           circleLayout={circleLayout}
           circlePaint={circlePaint}
          
