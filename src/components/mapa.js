@@ -9,7 +9,9 @@ const Map = MapGL({
   accessToken: TOKEN
 });
 let centro=[-66.8566,10.4841]
-//let zoom=[12]
+const flyToOptions = {
+  speed: 0.5
+};
  const circleLayout= MapGL.CircleLayout = { visibility: 'visible' };
  const lineLayout = {
   'line-cap': 'round' ,
@@ -132,7 +134,8 @@ getCirclePaint = (color) => ({
             //alert(JSON.stringify(bounds))
             this.props.onsetbounds(bounds)
           }}
-        > 
+          flyToOptions={flyToOptions}
+> 
          
         <Layer
         type="symbol"
