@@ -1,3 +1,4 @@
+
 {"nodos":
     {
         "type":"Feature",
@@ -12,10 +13,10 @@
                },                     
             "geometry":{
               "type":"Point",
-              "coordinates":[-66.8569755,10.4791625]
+              "coordinates":[-66.856444,10.481994]
             }
-          }
-          ,
+          },
+         
           {
             "type":"Feature",            
             "properties":{
@@ -43,20 +44,7 @@
               "coordinates":[-66.8769755,10.4991625]
             }
           }
-          ,
-          {
-            "type":"Feature",            
-            "properties":{
-              "tipo":"nodo",
-              "image":"nodo",
-              "lugar":"Edif PanNam",
-              "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
-               },                     
-            "geometry":{
-              "type":"Point",
-              "coordinates":[-66.8599755,10.4791625]
-            }
-          }
+         
           
         ]
       }

@@ -102,6 +102,18 @@ class ContentItem extends React.Component {
 export default Nodos;
 // <h1>{this.props.item.properties.place}</h1>
 /*
+const mappedRoute0 = rutas[0].points.map(
+  point => [point.lat, point.lng] 
+);
+const mappedRoute1 = rutas[1].points.map(
+  point => [point.lat, point.lng] 
+);
+const mappedRoute2 = rutas[2].points.map(
+  point => [point.lat, point.lng] 
+);
+const mappedRoute3 = rutas[3].points.map(
+  point => [point.lat, point.lng] 
+);
   <div className="container-fluid" style={{marginLeft: '5px'}}>
    
     <div className="d-flex flex-row">                    

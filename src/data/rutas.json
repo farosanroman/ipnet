@@ -1,109 +1,66 @@
 
 {"rutas":
-[
-    {    
-      "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-       "name": "Sub Nodos",
-       "tipo":"NodoPrincipal",  
-       "lugar":"Las Mercedes",
-       "capacidad":{"ancho":"50","unidad":"MH"    },
-        "points": [
-          {
-            "lat": -66.8722,
-            "lng": 10.4713
-          },
-          {
-            "lat": -66.863,
-            "lng": 10.473
-          },
-          {
-            "lat": -66.8628,
-            "lng": 10.4799
-          },
-          {
-            "lat":  -66.8569755,
-            "lng": 10.4791625
+  {
+      "type":"Feature",
+      "features":[
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif Torreon",
+            "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.856444,10.481994]
           }
-        ]
-
-      }
-    
-    ,
-    {    
-      "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-     "name": "Sub Nodos",
-     "tipo":"NodoPrincipal",  
-     "lugar":"Las Mercedes",
-     "capacidad":{"ancho":"50","unidad":"MH"    },
-     "points": [
-        {   
-          
-          "lat": -66.847684,
-          "lng": 10.499667
-        },
-        {
-          "lat":  -66.8583,
-          "lng": 10.4824
-        }
-      ]
-  
-    }
-    ,
-    {    
-      "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-      "tipo":"NodoPrincipal",  
-      "lugar":"Las Mercedes",
-      "capacidad":{"ancho":"50","unidad":"MH"    },
-       "points": [
-        {   
-          
-          "lat": -66.8827,
-          "lng": 10.4936
-        },
-        {
-          "lat":  -66.8583,
-          "lng": 10.4824
-        }
-      ]
-  
-      
-    },
-    
-    {    
-      "id": "95fa59d0-063e-11e6-8042-ab12df6ec57b",
-     "name": "Test route",
-      "distance": 10110.085,
-      "duration": 1307423,
-      "transport": "car",
-      "points": [
-        {   
-          
-          "lat": -66.8583,
-          "lng": 10.4824
         },
        
-        {   
-          
-          "lat": -66.846331,
-          "lng": 10.482619
-        },
-        {   
-          
-          "lat": -66.833026,
-          "lng": 10.479579
-        },
         {
-          "lat":  -66.8073,
-          "lng": 10.4935
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.874639,10.47635]
+          }
         }
-    
-      ],
-  
-      "departureId": "95ed8890-063e-11e6-8042-ab12df6ec57b",    
-      "arrivalId": "95ee9a00-063e-11e6-8042-ab12df6ec57b"
-  
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif La Lomita",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.873656,10.472433]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif Punta Larga",
+            "direccion":"Av. Silvia De Saliden, Urb. Colinas de valle arriba, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.870292,10.470322]
+          }
+        }
+       
+        
+      ]
     }
-
-  ]
 }
 

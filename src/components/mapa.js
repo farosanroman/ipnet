@@ -21,18 +21,11 @@ const linePaint = {
   'line-color': 'crimson',
   'line-width': 2
 };
-const puntos=rutas.points;
-const mappedRoute0 = rutas[0].points.map(
-  point => [point.lat, point.lng] 
-);
-const mappedRoute1 = rutas[1].points.map(
-  point => [point.lat, point.lng] 
-);
-const mappedRoute2 = rutas[2].points.map(
-  point => [point.lat, point.lng] 
-);
-const mappedRoute3 = rutas[3].points.map(
-  point => [point.lat, point.lng] 
+//const puntos=rutas.points;
+const mappedRoute0 = rutas.features.map(
+
+  point => point.geometry.coordinates
+
 );
 //console.log(mappedRoute)
 const circlePaint= MapGL.CirclePaint = {
@@ -158,32 +151,13 @@ getCirclePaint = (color) => ({
           </Popup>
         )}
       <Layer type="symbol" id="marker3" layout={{ 'icon-image': 'londonCycle' }} images={images}>
-          <Feature              
-              key={'1112'} 
-              coordinates={[-66.8583,10.4824]}
-            />
-            <Feature              
-              key={'112'} 
-              coordinates={[-66.8073,10.4935]}
-            />
-            <Feature              
-              key={'113'} 
-              coordinates={[-66.8827,10.4936]}
-            />
-        </Layer>
-      <Layer type="line" layout={lineLayout} paint={linePaint}>
-          <Feature coordinates={mappedRoute0} />
+         
         </Layer>
         <Layer type="line" layout={lineLayout} paint={linePaint}>
-          <Feature coordinates={mappedRoute1} />
-        </Layer>
-        <Layer type="line" layout={lineLayout} paint={linePaint}>
-          <Feature coordinates={mappedRoute2} />
-        </Layer>
-        <Layer type="line" layout={lineLayout} paint={linePaint}>
-          <Feature coordinates={mappedRoute3} />
-        </Layer>
 
+<Feature coordinates={mappedRoute0} />
+
+</Layer>
         <GeoJSONLayer
           data={clientes}
           circleLayout={circleLayout}
