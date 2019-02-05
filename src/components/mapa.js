@@ -23,9 +23,7 @@ const linePaint = {
 };
 //const puntos=rutas.points;
 const mappedRoute0 = rutas.features.map(
-
   point => point.geometry.coordinates
-
 );
 //console.log(mappedRoute)
 const circlePaint= MapGL.CirclePaint = {
@@ -52,6 +50,7 @@ class Mapa extends Component {
   constructor(props){
     super(props);    
     this.state={
+      rutas:rutas,
       nodos:nodos,
       center:centro,
       zoom:[13],
@@ -95,7 +94,7 @@ getCirclePaint = (color) => ({
     render() {
 
       //const { styleKey } = this.state;
-    let {zoom,center,properties,flagPopup,nodos,comentario } = this.state;
+    let {zoom,center,properties,flagPopup,nodos,rutas,comentario } = this.state;
     const N=nodos.features;
     let i =0;
     //alert(JSON.stringify(N))
@@ -114,6 +113,16 @@ getCirclePaint = (color) => ({
            />    
                 )     
           }) 
+          const SUBNODOS=rutas.features.map(subnodo=>{     
+            ii+=1;
+             return(
+               <Feature              
+                    key={ii} 
+                    coordinates={subnodo.geometry.coordinates}             
+                    onClick={this.markerClick.bind(this, {properties:subnodo.properties,coordinates:subnodo.geometry.coordinates})}
+            />    
+                 )     
+           }) 
          return(
         <div>
         <Map           
@@ -136,17 +145,17 @@ getCirclePaint = (color) => ({
         layout={{ "icon-image": "marker-15" }}>
         <Feature coordinates={[-66.95286,10]}/>       
       </Layer>
+     
       <Layer
         type="circle"
-        id="marker7"
+        id="marker73"
         paint={this.getCirclePaint('purple')}>
-        <Feature   coordinates={[-66.8566,10.4881]}/>       
+        <Feature   coordinates={mappedRoute0}/>       
       </Layer>
-     
-      <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
       
-      {NODOS}
-            </Layer>
+      <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+            {NODOS}
+      </Layer>
         {flagPopup && (
         <Popup key={'88'} coordinates={center}>            
               <div>{properties.lugar}</div>
@@ -159,11 +168,16 @@ getCirclePaint = (color) => ({
       <Layer type="symbol" id="marker3" layout={{ 'icon-image': 'londonCycle' }} images={images}>
          
         </Layer>
+        
         <Layer type="line" layout={lineLayout} paint={linePaint}>
-
-<Feature coordinates={mappedRoute0} />
-
-</Layer>
+            <Feature coordinates={mappedRoute0} />
+        </Layer>
+        <Layer
+        type="circle"
+        id="marker7"
+        paint={this.getCirclePaint('purple')}>
+        {SUBNODOS}      
+      </Layer>
         <GeoJSONLayer
           data={clientes}
           circleLayout={circleLayout}
