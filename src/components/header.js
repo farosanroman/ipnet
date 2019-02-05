@@ -6,6 +6,7 @@ import {
   //https://iconawesome.com/icon-package/font-awesome
   //npm install --save font-awesome
   import 'font-awesome/css/font-awesome.min.css';
+  import logo from '../images/ipnet2.jpg';
 //import 'bootstrap-social/bootstrap-social.css';
 // import {NavLink} from 'react-router-dom'
  //import logo from '../farocirculo.png';
@@ -28,8 +29,12 @@ class Header extends Component {
         
 <div>
 <Navbar color="secondary" dark  expand="md">
-          <NavbarBrand href="/">IpNet</NavbarBrand>
           <NavbarToggler color="dark" onClick={this.toggle} />
+          <NavbarBrand className="mr-auto" href="/">
+             <img src={logo} height="30" alt="Plataforma BizAccount" />  
+         </NavbarBrand> 
+          
+         <NavbarBrand href="/">IpNet</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

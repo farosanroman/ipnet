@@ -63,9 +63,9 @@ class Mapa extends Component {
    //this.markerClick = this.markerClick.bind(this)
     //this.onChangeEstrato=this.onChangeEstrato.bind(this)  
   }
-  
+
 getCirclePaint = (color) => ({
-    'circle-radius': 4,
+    'circle-radius': 6,
     'circle-color': color,
     'circle-opacity': 1.0
   });
@@ -135,6 +135,12 @@ getCirclePaint = (color) => ({
         id="marker2"
         layout={{ "icon-image": "marker-15" }}>
         <Feature coordinates={[-66.95286,10]}/>       
+      </Layer>
+      <Layer
+        type="circle"
+        id="marker7"
+        paint={this.getCirclePaint('purple')}>
+        <Feature   coordinates={[-66.8566,10.4881]}/>       
       </Layer>
      
       <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
