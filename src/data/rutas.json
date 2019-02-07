@@ -1,5 +1,5 @@
 
-{"rutas":
+{"rutas":[
   {
       "type":"Feature",
       "features":[
@@ -9,7 +9,7 @@
             "tipo":"nodo",
             "image":"nodo",
             "lugar":"Edif Torreon",
-            "direccion":"Avenida Veracruz, Caracas 1080, Miranda"          
+            "direccion":"Avenida Veracruz, Caracas 1080, Miranda 1"          
              },                     
           "geometry":{
             "type":"Point",
@@ -27,7 +27,28 @@
              },                     
           "geometry":{
             "type":"Point",
-            "coordinates":[-66.874639,10.47635]
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
           }
         }
         ,
@@ -61,6 +82,360 @@
        
         
       ]
+    },
+    
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif Agua Arriba",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.8751201024,10.4748044263 ]
+          }
+        }
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif Villa Marfil",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.8752139587,10.4744474655 ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Edif Cima Prince",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.8750177449,10.4741035107 ]
+          }
+        }
+         
+        
+      ]
     }
+    ,
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"EdifEL Prado",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.8703771329,10.4765710115 ]
+          }
+        }
+         
+        
+      ]
+    }
+    ,
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Portal Valle Arriba II",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.871935187,10.4716380067 ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Portal Valle Arriba I",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8716751199, 10.4713756346 ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Seven Suites",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.872514313, 10.4714218168 ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"La Lomita",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8736349853,10.4724722912 ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"Mirador",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[-66.8740483284,10.4729900109  ]
+          }
+        }
+         
+        
+      ]
+    },
+    {
+      "type":"Feature",
+      "features":[
+       
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"subnodo",
+            "image":"nodo",
+            "lugar":"Edif. Valle Arriba domus",
+            "direccion":"Urb. Colinas de Bello Monte. Municipio Baruta, Caracas 1050, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[ -66.8746461151,10.4762896916]
+          }
+        }
+        ,
+        {
+          "type":"Feature",            
+          "properties":{
+            "tipo":"nodo",
+            "image":"nodo",
+            "lugar":"La Lomita",
+            "direccion":"Urb.Colinas de Valle Arriba, Municipio Baruta, Caracas 1080, Miranda"          
+             },                     
+          "geometry":{
+            "type":"Point",
+            "coordinates":[  -66.8732424059,10.4730104444 ]
+          }
+        }
+         
+        
+
+      ]
+    }
+  ]
 }
 

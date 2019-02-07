@@ -22,9 +22,31 @@ const linePaint = {
   'line-width': 2
 };
 //const puntos=rutas.points;
-const mappedRoute0 = rutas.features.map(
-  point => point.geometry.coordinates
-);
+var i=0
+var RUTAS = [];
+
+var PUNTOS=[]
+rutas.forEach(function (ruta) {
+  var R=[]
+  
+  ruta.features.forEach(function (punto) {
+      R.push(punto.geometry.coordinates);
+      PUNTOS.push(punto)
+    })
+  RUTAS.push(R)
+});
+//alert(JSON.stringify(PUNTOS))
+//const mappedRoute = RUTAS.map(
+//  point => point.geometry.coordinates
+//);  
+//alert(JSON.stringify(mappedRoute))
+const mappedRoute0 = rutas[0].features.map(
+    point => point.geometry.coordinates
+  );
+  //alert(JSON.stringify(mappedRoute0))
+ // const mappedRoute1 = rutas[1].features.map(
+  //  point => point.geometry.coordinates
+//});
 //console.log(mappedRoute)
 const circlePaint= MapGL.CirclePaint = {
   'circle-color': 'dodgerblue'
@@ -50,6 +72,8 @@ class Mapa extends Component {
   constructor(props){
     super(props);    
     this.state={
+      lineas:RUTAS,
+      puntos:PUNTOS,
       rutas:rutas,
       nodos:nodos,
       center:centro,
@@ -94,7 +118,7 @@ getCirclePaint = (color) => ({
     render() {
 
       //const { styleKey } = this.state;
-    let {zoom,center,properties,flagPopup,nodos,rutas,comentario } = this.state;
+    let {zoom,center,properties,flagPopup,nodos,lineas,puntos,comentario } = this.state;
     const N=nodos.features;
     let i =0;
     //alert(JSON.stringify(N))
@@ -103,7 +127,8 @@ getCirclePaint = (color) => ({
          let sanroman=[{id:1,nombre:"San Roman"}]
          //var roman={id:1,nombre:"San Roman"}
          var ii=0;
-         const NODOS=N.map(nodo=>{     
+         const SOURCES=N.map(nodo=>{  
+           //sources proveedores de enlaces   
            ii+=1;
             return(
               <Feature              
@@ -113,7 +138,7 @@ getCirclePaint = (color) => ({
            />    
                 )     
           }) 
-          const SUBNODOS=rutas.features.map(subnodo=>{     
+          const PTOS=puntos.map(subnodo=>{     
             ii+=1;
              return(
                <Feature              
@@ -123,7 +148,17 @@ getCirclePaint = (color) => ({
             />    
                  )     
            }) 
-         return(
+          const RUTAS=lineas.map(linea=>{     
+            ii+1
+            return(
+               <Rutas              
+                    key={ii} 
+                    coordenadas={linea}             
+                    //onClick={this.markerClick.bind(this, {properties:subnodo.properties,coordinates:subnodo.geometry.coordinates})}
+                />    
+                 )     
+           }) 
+           return(
         <div>
         <Map           
           style="mapbox://styles/mapbox/light-v9"
@@ -137,8 +172,8 @@ getCirclePaint = (color) => ({
             this.props.onsetbounds(bounds)
           }}
           flyToOptions={flyToOptions}
-> 
-         
+        > 
+         {RUTAS}
         <Layer
         type="symbol"
         id="marker2"
@@ -146,15 +181,10 @@ getCirclePaint = (color) => ({
         <Feature coordinates={[-66.95286,10]}/>       
       </Layer>
      
-      <Layer
-        type="circle"
-        id="marker73"
-        paint={this.getCirclePaint('purple')}>
-        <Feature   coordinates={mappedRoute0}/>       
-      </Layer>
+      
       
       <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
-            {NODOS}
+            {SOURCES}
       </Layer>
         {flagPopup && (
         <Popup key={'88'} coordinates={center}>            
@@ -169,15 +199,13 @@ getCirclePaint = (color) => ({
          
         </Layer>
         
-        <Layer type="line" layout={lineLayout} paint={linePaint}>
-            <Feature coordinates={mappedRoute0} />
-        </Layer>
         <Layer
         type="circle"
         id="marker7"
         paint={this.getCirclePaint('purple')}>
-        {SUBNODOS}      
+        {PTOS}      
       </Layer>
+     
         <GeoJSONLayer
           data={clientes}
           circleLayout={circleLayout}
@@ -196,4 +224,21 @@ getCirclePaint = (color) => ({
         )    
      }
  }
+
+ class Rutas extends React.Component {
+  constructor(props) {
+    super(props);
+    //this.state = { image:this.props.src };
+   }
+  render(){
+    //let {image} = this.state;
+    return(
+     
+      <Layer type="line" layout={lineLayout} paint={linePaint}>
+            <Feature coordinates={this.props.coordenadas} />
+        </Layer>
+    )
+  }
+
+}
 export default Mapa;
