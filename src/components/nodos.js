@@ -26,6 +26,11 @@ class Nodos extends Component {
     this.setState({xu:xu})
     //alert(JSON.stringify(this.state.xu))
 }
+onPrueba = (a) => {  
+    
+  //this.setState({xu:xu})
+  //alert(JSON.stringify(this.state.xu))
+}
   render() { 
       //const clientes=[1,2,3]
       //alert(JSON.stringify(this.state.xu))
@@ -53,7 +58,7 @@ class Nodos extends Component {
                 &&(item.geometry.coordinates[0]>xu._sw.lng)
                 ){
                     return (
-                        <ContentItem item={item} key={i} />
+                        <ContentItem item={item} key={i}  />
                     )
                     
                  }}
