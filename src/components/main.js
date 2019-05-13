@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route,Switch,Redirect} from 'react-router-dom'
 import Header from '../components/header'
 import Home from '../components/home'
 import Nodos from '../components/nodos'
+import Cliente from '../components/cliente/cliente'
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,8 @@ class Main extends Component {
             <Switch>
             <Route path="/home" component={()=><Home/>}/>
             <Route path="/nodos" component={Nodos}/>            
+            <Route path="/cliente" component={Cliente}/>            
+          
             <Redirect to="/home"/>
             </Switch>         
            </div>

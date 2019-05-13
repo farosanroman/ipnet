@@ -45,7 +45,7 @@ class Header extends Component {
               
               <NavItem>
                 
-                <NavLink href="/nodos/"><span className="fa fa-user-circle"></span>Clientes</NavLink>
+                <NavLink href="/cliente/"><span className="fa fa-user-circle"></span>Clientes</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/nodos/"><span className="fa fa-snowflake-o"></span>Infaestructura</NavLink>
